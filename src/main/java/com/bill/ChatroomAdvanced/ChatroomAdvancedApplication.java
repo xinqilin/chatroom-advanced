@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ChatroomAdvancedApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ChatroomAdvancedApplication.class, args);22
+		SpringApplication.run(ChatroomAdvancedApplication.class, args);33
 	}
 
 }
