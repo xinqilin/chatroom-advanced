@@ -27,23 +27,18 @@
     </style>
 </head>
 <body>
-<div class="alert d-none fixed-top float-right" role="alert" id="_alertdiv">
-    <span class="alert-msg">　</span>
-    <button type="button" class="close" onclick="closeAlert(this)">
-        <span>&times;</span>
-    </button>
-</div>
+
 <div class="container h-100">
     <div class="row">
-        <div class="col-sm">
+        <div class="col">
             <div class="card">
                 <div class="card-header">
-                    The Meeting Room Communication
+                Bill-ChatRoom-Adviced
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-1">
-                            <label>CRID:</label>
+                            <label>Room:</label>
                         </div>
                         <div class="col-3">
                             <label th:text="${crid}" id="crid"></label>
@@ -51,13 +46,13 @@
                     </div>
                     <div class="row">
                         <div class="col-1">
-                            <label>My ID:</label>
+                            <label>ID:</label>
                         </div>
                         <div class="col-3">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Your ID" aria-label="Your ID" aria-describedby="btnConnect" id="uid">
+                                <input type="text" class="form-control" placeholder="ID" aria-label="ID" aria-describedby="btnConnect" id="uid">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="btnConnect">Connect</button>
+                                    <button class="btn btn-outline-secondary" type="button" id="btnConnect">連線</button>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +66,7 @@
         <div class="col-3 h-100">
             <div class="card h-100">
                 <div class="card-header">
-                    Contact List<!---->
+                    	上線<!---->
                 </div>
                 <div class="card-body contact-list scrollbar-dusty-grass">
                     <ul class="list-group" id="contactlist">
@@ -83,7 +78,7 @@
         <div class="col-9 h-100">
             <div class="card">
                 <div class="card-header">
-                    Messages
+                    	訊息
                 </div>
                 <div class="card-body message-list scrollbar-ripe-malinka">
                     <div id="messagelistScroll">
@@ -95,9 +90,9 @@
                 <div class="card-foot">
                     <div class="row"><div class="col-1"></div><div class="col-10">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Your message" aria-label="Your message" aria-describedby="btnSend" id="messageBox">
+                        <input type="text" class="form-control" placeholder="訊息..." aria-label="訊息..." aria-describedby="btnSend" id="messageBox">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="btnSend">Send</button>
+                            <button class="btn btn-outline-secondary" type="button" id="btnSend">發送</button>
                         </div>
                     </div>
                     </div></div>
@@ -105,6 +100,13 @@
             </div>
         </div>
     </div>
+    
+    <div class="alert d-none fixed-top float-right" role="alert" id="_alertdiv">
+    <span class="alert-msg">　</span>
+    <button type="button" class="close" onclick="closeAlert(this)">
+        <span>&times;</span>
+    </button>
+</div>
 </div>
 </body>
 </html>
