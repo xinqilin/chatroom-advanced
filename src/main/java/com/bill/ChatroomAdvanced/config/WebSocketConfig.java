@@ -11,6 +11,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer{
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
 		// TODO Auto-generated method stub
 		WebSocketMessageBrokerConfigurer.super.registerStompEndpoints(registry);
+		//給client 連接的url
+		registry.addEndpoint("/bill-chatroom").withSockJS();
 	}
 
 	@Override
@@ -23,6 +25,10 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer{
 	public void configureMessageBroker(MessageBrokerRegistry registry) {
 		// TODO Auto-generated method stub
 		WebSocketMessageBrokerConfigurer.super.configureMessageBroker(registry);
+		//被訂閱頻道的前綴
+		registry.enableSimpleBroker("/topic");
+		//傳送訊息的前綴
+        registry.setApplicationDestinationPrefixes("/bill/room1");
 	}
 
 }
