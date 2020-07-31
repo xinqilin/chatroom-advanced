@@ -23,7 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 public class MainController {
 	
 	@Autowired
-    MainService mainService;
+	private MainService mainService;
 
     @Autowired
     private SimpMessageSendingOperations messagingTemplate;

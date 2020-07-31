@@ -18,10 +18,7 @@ public class ChatroomAdvancedApplication implements ApplicationRunner{
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("app running!");
-		log.error("app is Error");
-		log.warn("app is Warn");
-		log.info("app is Info");
-		log.debug("app is Debug");
+		log.info("正常啟動");
 	}
 
 }
